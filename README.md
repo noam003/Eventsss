@@ -15,7 +15,7 @@
 ## Features
 EVENTsss Calendar deploys the [TicketMaster Discovery API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/) over a user-friendly interface to deliver the following features:
 - Search for events by date, location, keyword, or cost
-- Actively accept or decline event suggestions
+- Actively choose from lists of suggested results
 - Add events to personal calendar
 - Ability to add custom personal events
 - Intuitive search page
