@@ -60,7 +60,7 @@ cd cpr
 mkdir build && cd build
 cmake ..
 make
-make install
+sudo make install
 ```
 5. Install nlohmann/json
 ```sh
@@ -69,7 +69,11 @@ cd json
 mkdir build && cd build
 cmake ..
 make
-make install
+sudo make install
+```
+6. Cache the new libraries
+```
+sudo ldconfig
 ```
 ## Launching the Application
 
