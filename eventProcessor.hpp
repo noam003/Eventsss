@@ -9,9 +9,9 @@ using std::string;
 
 class OptionRunner {
 private:
-	vector<int> window_res = {900,245};
+	vector<int> window_res = {900,255};
 	sf::RenderWindow window;
-	bool accept = false;
+	char accept = 'c';
 
 
 public:
@@ -37,19 +37,20 @@ public:
 				if (event.key.code == sf::Keyboard::Escape)
 					window.close();
 				if (event.key.code == sf::Keyboard::Y){
-					accept = true;
+					accept = 'y';
 					window.close();
 				}
 
 				if (event.key.code == sf::Keyboard::N)
-					accept = false;
+					accept = 'n';
 					window.close();	
 				
 		}
 	}
 }
 
-bool run_homepage(vector<string> vec) {
+// returns 'y' for accept, 'n' for next event, 'c' to close
+char run_homepage(vector<string> vec) {
 			homepage();
 			while (window.isOpen()){
 
@@ -72,34 +73,34 @@ bool run_homepage(vector<string> vec) {
  		home_title.setFillColor(sf::Color::Black);
   		home_title.setCharacterSize(25);
  	 	home_title.setPosition(25, 50);
- 	 	home_title.setString("Event found: press \"y\" to add to calendar, any other key to decline");
+ 	 	home_title.setString("Event found: press \"y\" to add to calendar, \"n\" to see next event,\nor any other key to close");
 
  	 	sf::Text home_text;
  	 	home_text.setFont(regular);
  		home_text.setFillColor(sf::Color::Blue);
   		home_text.setCharacterSize(23);
- 	 	home_text.setPosition(25, 110);
+ 	 	home_text.setPosition(25, 120);
  	 	home_text.setString(vec.at(6).length() > 72 ? vec.at(6).substr(0,69) + "..." : vec.at(6));
 
  	 	sf::Text home_text_2;
  	 	home_text_2.setFont(regular);
  		home_text_2.setFillColor(sf::Color::Black);
   		home_text_2.setCharacterSize(15);
- 	 	home_text_2.setPosition(25, 140);
+ 	 	home_text_2.setPosition(25, 150);
  	 	home_text_2.setString("Location: " + vec.at(7));
 
  	 	sf::Text home_text_3;
  	 	home_text_3.setFont(regular);
  		home_text_3.setFillColor(sf::Color::Black);
   		home_text_3.setCharacterSize(15);
- 	 	home_text_3.setPosition(25, 160);
+ 	 	home_text_3.setPosition(25, 170);
  	 	home_text_3.setString("Date: " + vec.at(1) + "/" + vec.at(2) + "/" + vec.at(0));
 
  	 	sf::Text home_text_4;
  	 	home_text_4.setFont(regular);
  		home_text_4.setFillColor(sf::Color::Black);
   		home_text_4.setCharacterSize(15);
- 	 	home_text_4.setPosition(25, 180);
+ 	 	home_text_4.setPosition(25, 190);
  	 	home_text_4.setString("Time: " + vec.at(3) + ":" + vec.at(4));  	 	
 
 

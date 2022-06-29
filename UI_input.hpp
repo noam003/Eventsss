@@ -423,13 +423,24 @@ public:
 
         // pass into the eventProcessor
         OptionRunner o;
-        bool wanted = o.run_homepage(vec);
-        if (wanted){
+        char wanted = o.run_homepage(vec);
+        if (wanted == 'y'){
               cal.addEvent(std::stoi(vec.at(0)),std::stoi(vec.at(1)),std::stoi(vec.at(2)),
       std::stoi(vec.at(3)),std::stoi(vec.at(4)),std::stoi(vec.at(5))
       ,vec.at(6),vec.at(7));
         }
       proceed = true;
+      if (wanted == 'n'){
+        proceed = false;
+        if (count != resVec.size() - 1){
+        count++;
+        vec = resVec.at(count);
+         } else{
+          std::thread thread_obj(&Form::launchSnakeGame, this);
+          thread_obj.detach();
+        return;
+       }
+      }
     }
     catch(...){
       if (count != resVec.size() - 1){
