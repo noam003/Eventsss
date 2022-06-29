@@ -37,7 +37,14 @@ EVENTsss Calendar deploys the [TicketMaster Discovery API](https://developer.tic
 - [nlohmann/json](https://github.com/nlohmann/json)
 
 **Using CMake to install dependencies (Linux):**
-1. Install CMake at https://cmake.org/install
+1. Download the latest linux binary of at https://cmake.org/install, then install:
+```sh
+# this command is for the binary "cmake-3.24.0-rc2-linux-x86_64.sh"
+sudo sh cmake-3.24.0-rc2-linux-x86_64.sh --prefix=/usr/local/ --exclude-subdir
+
+# CMake requires OpenSSL
+sudo apt-get install libssl-dev
+```
 2. Install SFML:
 ```sh
 sudo apt-get install libsfml-dev
@@ -58,7 +65,7 @@ make install
 5. Install nlohmann/json
 ```sh
 git clone https://github.com/nlohmann/json
-cd cpr
+cd json
 mkdir build && cd build
 cmake ..
 make
