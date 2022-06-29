@@ -8,7 +8,7 @@
 **Contents:**\
 [Features](#features "Goto features")\
 [Installation](#Installation "Goto installation")\
-[Launching the Application](#Launching-the-application "Goto Launching-the-application")\
+[Launching the Application](#launching-the-application "Goto launching-the-application")\
 [Screenshots](#Screenshots "Goto screenshots")\
 [Authors](#Authors "Goto authors")
 
