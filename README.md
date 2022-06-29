@@ -1,5 +1,5 @@
 
-![Logo](https://i.ibb.co/Rb8WNRD/Screen-Shot-2022-06-29-at-1-33-39-PM.png)
+![Logo](https://images4.imagebam.com/bb/cc/82/MEBH0JI_o.png)
 
 
 # EVENTsss Calendar 🐍📅
@@ -8,7 +8,7 @@
 **Contents:**\
 [Features](#features "Goto features")\
 [Installation](#Installation "Goto installation")\
-[Launching the Application](#Launching-the-application "Goto Launching-the-application")\
+[Launching the Application](#launching-the-application "Goto launching-the-application")\
 [Screenshots](#Screenshots "Goto screenshots")\
 [Authors](#Authors "Goto authors")
 
@@ -37,7 +37,14 @@ EVENTsss Calendar deploys the [TicketMaster Discovery API](https://developer.tic
 - [nlohmann/json](https://github.com/nlohmann/json)
 
 **Using CMake to install dependencies (Linux):**
-1. Install CMake at https://cmake.org/install
+1. Download the latest linux binary of at https://cmake.org/install, then install:
+```sh
+# this command is for the binary "cmake-3.24.0-rc2-linux-x86_64.sh"
+sudo sh cmake-3.24.0-rc2-linux-x86_64.sh --prefix=/usr/local/ --exclude-subdir
+
+# CMake requires OpenSSL
+sudo apt-get install libssl-dev
+```
 2. Install SFML:
 ```sh
 sudo apt-get install libsfml-dev
@@ -53,18 +60,22 @@ cd cpr
 mkdir build && cd build
 cmake ..
 make
-make install
+sudo make install
 ```
 5. Install nlohmann/json
 ```sh
 git clone https://github.com/nlohmann/json
-cd cpr
+cd json
 mkdir build && cd build
 cmake ..
 make
-make install
+sudo make install
 ```
-## Lauching the Application
+6. Cache the new libraries
+```
+sudo ldconfig
+```
+## Launching the Application
 
 To run this project, simply launch the pre-compiled executable after installing the necessary libraries:
 
@@ -83,10 +94,10 @@ main
 ## Screenshots
 
 **Search for events and add them to your calendar straight from the app:**
-![App Screenshot](https://i.ibb.co/f9N7f65/Screen-Shot-2022-06-29-at-1-48-42-PM.png)
+![App Screenshot](https://images4.imagebam.com/a6/7f/78/MEBH0JE_o.png)
 
 **Can't find anything? No worries! Stay home and play Snake:**
-![App Screenshot](https://i.ibb.co/QjxnvJT/Screen-Shot-2022-06-29-at-1-56-49-PM.png)
+![App Screenshot](https://images4.imagebam.com/db/af/48/MEBH0JF_o.png)
 
 ## Authors
 - [@maxdittgen](https://www.github.com/maxdittgen) [myd4@cornell.edu]
