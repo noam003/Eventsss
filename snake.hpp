@@ -161,6 +161,7 @@ public:
 
 	void draw_homepage() {
 		window.clear(sf::Color::Black);
+
 		
 		arcade_font.loadFromFile("fonts/ARCADECLASSIC.TTF");
 		sf::Text home_title;
@@ -184,12 +185,20 @@ public:
  	 	home_text_2.setPosition(220, 240);
  	 	home_text_2.setString("PRESS  I   TO   VIEW   INSTRUCTIONS");
 
+ 	 	sf::Text home_text_3;
+ 	 	home_text_2.setFont(arcade_font);
+ 		home_text_2.setFillColor(sf::Color::Yellow);
+  		home_text_2.setCharacterSize(30);
+ 	 	home_text_2.setPosition(175, 60);
+ 	 	home_text_2.setString("STAY HOME TODAY AND PLAY");
+
 
 
  	 
  	 	window.draw(home_title);
  	    window.draw(home_text);
  	    window.draw(home_text_2);
+ 	    window.draw(home_text_3);
 		window.display();
 	}
 
