@@ -31,7 +31,7 @@ int main(int argc, char* argv[]){
  //    cout << out.at(0).at(7);
 
 
-	MyCalendar cal{"Max's Calendar"};
+	MyCalendar cal{"EVENTsss Calendar"};
 	// cout << cal.getToday();
 	std::thread thread_obj(&MyCalendar::runCalendar, std::ref(cal));
 	thread_obj.detach();
