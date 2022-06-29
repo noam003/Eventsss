@@ -101,7 +101,7 @@ vector<vector<string>> getEvents(vector<string> req){
         ((city != "-1") ? ("&city={" + city + "}") : "") +
         ((radius != "-1") ? ("&radius=" + radius) : "") +
         ((keyword != "-1") ? ("&keyword=" + keyword) : "") +
-        ((date != "-1") ? "&sort=relevance,asc" : "") +  // sort by date if no date provided
+        ((date != "-1") ? "&sort=relevance,desc" : "") +  // sort by date if no date provided
         "&apikey=aiNsqoCFarMdeGcZSpGSzAmaViG775KR";
     std::cout << apiRequestUrl;
 
