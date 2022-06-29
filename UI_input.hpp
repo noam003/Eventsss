@@ -310,7 +310,6 @@ public:
 
     mysubmit.set_label("Submit Event");
     mysubmit.signal_button_release_event().connect([&](GdkEventButton* event) {
-      cout << "swag";
       my_info.at(0) = mytextBox1.get_text();
       my_info.at(1) = mytextBox2.get_text();
       my_info.at(2) = mytextBox3.get_text();
@@ -324,13 +323,11 @@ public:
 
     apisubmit.set_label("Submit Search");
     apisubmit.signal_button_release_event().connect([&](GdkEventButton* event) {
-      cout << "sped";
       search_info.at(0) = (textBox1.get_text() == "Date") ? "-1" : textBox1.get_text();
       search_info.at(1) = (textBox3.get_text() == "City") ? "-1" : textBox3.get_text();
       search_info.at(2) = (textBox4.get_text() == "Radius") ? "-1" : textBox4.get_text();
       search_info.at(3) = (textBox5.get_text() == "Cost") ? "-1" : textBox5.get_text();
       search_info.at(4) = (textBox6.get_text() == "Keyword") ? "-1" : textBox6.get_text();
-      cout << "sped";
       plotAPIEvent(cal);
       return true;
     });
@@ -380,7 +377,6 @@ public:
   }
 
   void plotAPIEvent(MyCalendar &cal){
-    cout << "swag";
     string date = search_info.at(0);
     string city = search_info.at(1);
     string radius = search_info.at(2);
@@ -393,9 +389,6 @@ public:
     // string keyword = "-1";
 
     vector<string> reqVec{date, city, radius, cost, keyword};
-    for (auto e:reqVec){
-      cout << e << " ";
-    }
     vector<vector<string>> resVec = getEvents(reqVec);
     if (resVec.size() <= 0){
       std::thread thread_obj(&Form::launchSnakeGame, this);
@@ -409,7 +402,6 @@ public:
     bool proceed = false;
     while (!proceed){
     try{
-        cout << vec.at(2);
 
         // see if all of the vector is filled;
         std::stoi(vec.at(0));

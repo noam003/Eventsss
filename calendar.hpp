@@ -277,13 +277,7 @@ public:
 	    int yPos = bounds.at(1);
 	    int width = bounds.at(2);
 	    int height = bounds.at(3);
-	    
-	    // debugging--delete
-	    // cout << "event box debugging (xpos, ypos, width, height): " << endl;
-	    // cout << xPos << endl;
-	    // cout << yPos << endl;
-	    // cout << width << endl;
-	    // cout << height << endl;
+
 
 	    // Make the box
 	    sf::RectangleShape box(sf::Vector2f(width, height));
@@ -292,7 +286,6 @@ public:
 	        sf::Color::Magenta, sf::Color::Cyan};
 	    srand(std::chrono::high_resolution_clock::now().time_since_epoch().count());
 	    box.setFillColor(colors.at(std::rand() % 5));
-	    // cout << std::rand() % 6 << endl;
 	    box.setOutlineColor(sf::Color::Black);
 	    box.setOutlineThickness(1);
 	    box.setPosition(xPos, yPos);

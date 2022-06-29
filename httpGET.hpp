@@ -103,9 +103,7 @@ vector<vector<string>> getEvents(vector<string> req){
         ((keyword != "-1") ? ("&keyword=" + keyword) : "") +
         ((date != "-1") ? "&sort=relevance,desc" : "") +  // sort by date if no date provided
         "&apikey=aiNsqoCFarMdeGcZSpGSzAmaViG775KR";
-    std::cout << apiRequestUrl;
 
-    // std::cout << apiRequestUrl << std::endl;
     auto r = cpr::Get(cpr::Url{apiRequestUrl});
     json result = json::parse(r.text);
 
@@ -117,7 +115,6 @@ vector<vector<string>> getEvents(vector<string> req){
         events = result.at("events");  
     }
     catch (...) {
-        // std::cout << "No events found. Please try different dates.\n";
         return results;
     }
 
@@ -156,8 +153,6 @@ vector<vector<string>> getEvents(vector<string> req){
         string eventDate = removeQuotes(eventStart["localDate"].dump());
         string eventTime = removeQuotes(eventStart["localTime"].dump());
 
-        // std::cout << eventName + ": " + eventDate + " at " + eventTime
-        // + ". " + eventPrice << "\n" << address << "\n";
 
         // push eveything into a vector
         vector<string> outputEvent{eventDate.substr(0,4), eventDate.substr(5,2), 
