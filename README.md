@@ -64,7 +64,7 @@ cmake ..
 make
 make install
 ```
-## Lauching the Application
+## Launching the Application
 
 To run this project, simply launch the pre-compiled executable after installing the necessary libraries:
 
