@@ -303,12 +303,12 @@ class Engine {  //  game engine that deals with game logic, window and graphics 
 
   void intializie() {
     //  function to initalize game
-    //  build snake
+    // build snake
     recreate_snake();
     //set snake speed and direction
     head_speed = 2;
     head_direction = Direction::RIGHT;
-    //  set time since last move = 0
+    // set time since last move = 0
     t_since_previous_move = sf::Time::Zero;
 
     snake_parts_add = 0;
@@ -328,7 +328,7 @@ class Engine {  //  game engine that deals with game logic, window and graphics 
 
   void input() {
     sf::Event event;
-    //  closing window
+    // closing window
     while (window.pollEvent(event)) {
 
       if (event.type == sf::Event::Closed)
@@ -338,7 +338,7 @@ class Engine {  //  game engine that deals with game logic, window and graphics 
 
         if (event.key.code == sf::Keyboard::Escape)
           window.close();
-        //  if user inputs arrow key, run update_direction function
+        // if user inputs arrow key, run update_direction function
         if (event.key.code == sf::Keyboard::Up)
           update_direction(Direction::UP);
         if (event.key.code == sf::Keyboard::Down)
@@ -390,7 +390,7 @@ class Engine {  //  game engine that deals with game logic, window and graphics 
         snake_parts_add = snake_parts_add - 1;
       }
 
-      //  updating head position:
+      // updating head position:
       sf::Vector2f new_pos;
       if (head_direction == Direction::UP)
         new_pos = {current_pos.x, current_pos.y - 20};
