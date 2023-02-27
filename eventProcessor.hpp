@@ -1,5 +1,3 @@
-// Copyright 2022 Maximilian Dittgen, myd4@cornell.edu
-
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
