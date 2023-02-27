@@ -1,5 +1,3 @@
-// Copyright 2022 Maximilian Dittgen, myd4@cornell.edu
-
 #include <chrono>
 #include <cstdint>
 #include <gtkmm.h>
