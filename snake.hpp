@@ -1,5 +1,3 @@
-// Copyright 2022 Rashid B. Kolaghassi rbrk@bu.edu
-
 #include <iostream>
 #include <vector>
 #include <deque>
