@@ -99,6 +99,7 @@ main
 **Can't find anything? No worries! Stay home and play Snake:**
 ![App Screenshot](https://images4.imagebam.com/db/af/48/MEBH0JF_o.png)
 
+
 ## Authors
 - [@maxdittgen](https://www.github.com/maxdittgen) [myd4@cornell.edu]
 - [@noam003](https://www.github.com/noam003) [noam@bu.edu]
